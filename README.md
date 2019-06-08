@@ -1,0 +1,2 @@
+# CHBaseEntity
+Entity解析工具，基于YYModel，外部使用的时候Entity类继承自CHBaseEntity即可
