@@ -1,0 +1,6 @@
+framework module CHBaseEntity {
+  umbrella header "CHBaseEntity-umbrella.h"
+
+  export *
+  module * { export * }
+}
