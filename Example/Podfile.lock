@@ -4,20 +4,17 @@ PODS:
   - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - CHBaseEntity (from `../`)
+  - CHBaseEntity (= 0.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CHBaseEntity
     - YYModel
 
-EXTERNAL SOURCES:
-  CHBaseEntity:
-    :path: "../"
-
 SPEC CHECKSUMS:
-  CHBaseEntity: aa4eb69cabac48d938cf22df2ccf409cd0429571
+  CHBaseEntity: 02c953e4375e21acc13a3f410de2cfbfe62e1e16
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 2cd5b082dab3027029aa0aee27f0edcfb0ec5969
+PODFILE CHECKSUM: 6f4bc6fd77efd5359f27a26faddad954846e7dcb
 
 COCOAPODS: 1.6.1

@@ -2,7 +2,10 @@ use_frameworks!
 
 platform :ios, '8.0'
 
+source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://github.com/lichanghong/CHBaseEntity.git'
+
 target 'CHBaseEntity_Example' do
-  pod 'CHBaseEntity', :path => '../'
- 
+#  pod 'CHBaseEntity', :path => '../'
+  pod 'CHBaseEntity', '0.1.0'
 end
