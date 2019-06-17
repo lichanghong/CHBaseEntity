@@ -7,7 +7,7 @@
 
 #import "CHBaseEntity.h"
 #import "YYModel.h"
-
+ 
 @interface CHBaseEntity()
 
 @end
@@ -26,7 +26,7 @@
 
 + (NSMutableArray *)arrayOfModelsWithDictionaries:(NSArray *)dictionaries
 {
-    id entity =  [self arrayOfModelsWithDictionaries:dictionaries];
+   id entity = [NSArray yy_modelArrayWithClass:self.class json:dictionaries];
     return entity;
 }
 
