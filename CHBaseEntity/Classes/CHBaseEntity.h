@@ -13,7 +13,7 @@ typedef NS_ENUM(NSInteger, CHMapperType) {
     CHMapperTypeUnderscoreCaseToCamelCase,
 };
  
-@interface CHBaseEntity : NSObject
+@interface CHBaseEntity : NSObject <NSCoding>
 #pragma mark - 实例化相关
 /**
  * 根据json的dictionaryValue创建模型

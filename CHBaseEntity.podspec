@@ -1,12 +1,12 @@
 
-
-#
+# pod lib lint CHBaseEntity.podspec --allow-warnings --verbose
+# pod trunk push CHBaseEntity.podspec --allow-warnings --verbose
 
 
 
 Pod::Spec.new do |s|
   s.name             = 'CHBaseEntity'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'Entity解析工具，基于YYModel 1.0.4'
  ription      = <<-DESC
 Entity解析工具，基于YYModel 1.0.4，外部使用的时候Entity类继承自CHBaseEntity即可
