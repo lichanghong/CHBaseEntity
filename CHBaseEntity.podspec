@@ -6,7 +6,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CHBaseEntity'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'Entity解析工具，基于YYModel 1.0.4'
   s.description      = <<-DESC
 Entity解析工具，基于YYModel 1.0.4，外部使用的时候Entity类继承自CHBaseEntity即可
