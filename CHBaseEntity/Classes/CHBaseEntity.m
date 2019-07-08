@@ -44,7 +44,7 @@
 
 - (NSString *)toJSONString
 {
-   return [self yy_modelToJSONString];
+    return [self yy_modelToJSONString];
 }
 - (id)toJSONObject
 {
@@ -54,7 +54,7 @@
 #pragma mark yymodel
 + (NSDictionary *)modelContainerPropertyGenericClass {
     return nil;
- }
+}
 
 + (CHMapperType)mapperType
 {
@@ -71,14 +71,14 @@
     if (![self.class isMemberOfClass:CHBaseEntity.class]) { //不是基类
         NSMutableDictionary *newDic = [NSMutableDictionary dictionary];
         YYClassInfo *classInfo = [YYClassInfo classInfoWithClass:self];
+        NSMutableDictionary *mdic = [NSMutableDictionary dictionaryWithDictionary:classInfo.propertyInfos];
         NSDictionary *dic = [self customPropertyMapper];
         if (dic) {
-            NSMutableDictionary *mdic = [NSMutableDictionary dictionaryWithDictionary:classInfo.propertyInfos];
             [mdic removeObjectsForKeys:dic.allKeys];
             if ([self mapperType] == CHMapperTypeUnderscoreCaseToCamelCase) {
                 for (NSString *key in mdic.allKeys) {
                     if (!key) continue;
-                   NSString *value = underscoreCaseKeyWithCamelCaseKey(key);
+                    NSString *value = underscoreCaseKeyWithCamelCaseKey(key);
                     if (value) {
                         [newDic setObject:value forKey:key];
                     }
@@ -96,6 +96,15 @@
             }
             if (dic && dic.count > 0) {
                 [newDic addEntriesFromDictionary:dic];
+            }
+        }
+        else if ([self mapperType] == CHMapperTypeUnderscoreCaseToCamelCase) {
+            for (NSString *key in mdic.allKeys) {
+                if (!key) continue;
+                NSString *value = underscoreCaseKeyWithCamelCaseKey(key);
+                if (value) {
+                    [newDic setObject:value forKey:key];
+                }
             }
         }
         
